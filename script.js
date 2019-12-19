@@ -30,6 +30,7 @@ const app = () => {
     song.src = this.getAttribute('data-sound');
     video.src = this.getAttribute('data-video');
     checkPlaying(song);
+
   }))
 
   // Play sound
@@ -88,6 +89,10 @@ const app = () => {
       play.src = './svg/play.svg';
       video.pause();
     }
+
+    // if (seconds < 10) {
+    //   timeDisplay = "0" + seconds;
+    // }
   }
 
 }
