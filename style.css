@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* App position */
 .app {
   height: 100vh;
   display: flex;
@@ -11,6 +12,9 @@
   align-items: center;
 }
 
+
+
+/* time select sound picker and player container position */
 .time-select, .sound-picker, .player-container {
   height: 80%;
   flex: 1;
@@ -25,7 +29,7 @@
   height: 50%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-90deg);
   pointer-events: none;
 }
 
@@ -46,12 +50,16 @@
   background: lightcoral;
 } */
 
-
+/* Time display position */
 .time-display {
   position: absolute;
-  bottom: 10%;
-  color: gold;
+  bottom: 1%;
+  color: black;
   font-size: 4rem;
+  border: 3px solid white;
+  padding: .5rem 2rem;
+  border-radius: 4rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   
 }
 
@@ -61,12 +69,24 @@
   /* display: none; */
   position: fixed;
   top: 0%;
+  left: 0%; 
+  width: 100%;
+  z-index: -10;
+}
+
+
+/* Width of video */
+video {
+  position: fixed;
+  top: 0%;
   left: 0%;
   width: 100%;
   z-index: -10;
 }
 
 
+
+/* time select attributes */
 .time-select button, .sound-picker button {
   color: gold;
   width: 30%;
@@ -80,12 +100,13 @@
   outline: none;
 }
 
-
+/* time select hover */
 .time-select button:hover {
   color: black;
   background: rgba(255, 255, 255, 0.199);
 }
 
+/* Sound picker button */
 .sound-picker button {
   border: none;
   height: 120px;
@@ -94,6 +115,8 @@
   padding: 30px;
 }
 
+
+/* Sound picker background color */
 .sound-picker button:nth-child(1) {
   background: #4972a1;
 }
@@ -103,4 +126,10 @@
 
 .sound-picker button img {
   height: 100%;
+}
+
+
+img .beach {
+  display: none;
+  width: 100%;
 }
